@@ -1,3 +1,5 @@
+%option noyywrap
+
 %{
 #include <stdio.h>
 #include <stdlib.h>
@@ -14,11 +16,6 @@ size_t nlines = 0;
 .         { ++nchars; }
 
 %%
-
-int yywrap()
-{
-    return 1;
-}
 
 int main(int argc, char **argv)
 {
