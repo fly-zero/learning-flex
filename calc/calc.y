@@ -26,6 +26,7 @@ factor: term { $$ = $1; }
       ;
 
 term: NUMBER { $$ = $1; }
+    | '(' expr ')' { $$ = $2; }
     ;
 
 %%
