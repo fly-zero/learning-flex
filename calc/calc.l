@@ -1,3 +1,5 @@
+%option noyywrap
+
 %{
 #include <stdlib.h>
 
@@ -15,8 +17,3 @@ extern int yylval;
 .              { fprintf(stderr, "Unknown charactor: %s\n", yytext); yyterminate(); } 
 
 %%
-
-int yywrap()
-{
-    return 1;
-}
